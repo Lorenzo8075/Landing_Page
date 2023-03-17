@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <img src="job_board_background.jpeg" /> -->
+    <title>Form</title>
+  </head>
+
+  <body>
+    <header class="form-header">
+      <h1>WorkGo</h1>
+      <p>
+        <em> Find work in the US with companies offering visa sponsorship </em>
+      </p>
+    </header>
+
+    <form class="user-info" action="process-form.php" method="post">
+      <!-- <form class="user-info" action="thankYou.html"></form> -->
+      <div class="form-row">
+        <label for="first-name">First Name</label>
+        <input type="text" name="first-name" id="first-name" /> <br />
+        <label for="last-name">Last Name</label>
+        <input type="text" name="last-name" id="last-name" /> <br />
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="ldap@email.com"
+        />
+      </div>
+      <!-- Adding radio buttons -->
+      <fieldset class="radio-form-row">
+        <legend>Would you like to be contacted for job opportunities?</legend>
+        <!-- first selection - no -->
+        <input type="radio" name="push-type" id="push-type-1" value="no" />
+        <label for="push-type-1" class="radio-label">No</label>
+        <!-- second selection - yes -->
+        <input
+          type="radio"
+          name="push-type"
+          id="push-type-2"
+          value="yes"
+          checked
+        />
+        <label for="push-type-2" class="radio-label">Yes</label>
+      </fieldset>
+
+      <!-- Adding dropdown menu -->
+      <!-- TO DO: add a dropdown menu with all the universities in the US -->
+      <div class="form-row">
+        <label for="school">Pick your university</label>
+        <select name="school" id="school">
+          <option value="georgiaTech">Georgia Tech</option>
+          <option value="harvard">Harvard</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="industry">Pick your industry</label>
+        <select name="industry" id="industry">
+          <option value="tech">Technology</option>
+          <option value="finance">Finance</option>
+        </select>
+      </div>
+
+      <!-- Adding a checkbox -->
+
+      <div class="form-row">
+        <label for="work-type" class="checkbox-label"
+          >What kind of job are you looking for</label
+        >
+        <input
+          type="checkbox"
+          name="full-time"
+          id="full-time"
+          value="full-time1"
+        />
+        <br /><span class="icon">Full-time</span> <br />
+        <input
+          type="checkbox"
+          name="part-time"
+          id="part-time"
+          value="part-time1"
+        />
+        <br /><span class="icon">Part-time</span>
+      </div>
+
+      <!-- Adding text area to form -->
+      <div class="form-row">
+        <label for="description">Your job description</label>
+        <textarea
+          name="description"
+          id="description"
+          placeholder="Described your ideal job..."
+        ></textarea>
+        <!-- <div class="description">Described your ideal job</div> -->
+      </div>
+
+      <!-- Adding Submit button -->
+      <!-- Button needs a name? -->
+      <div class="form-row">
+        <button type="submit" name="sub">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

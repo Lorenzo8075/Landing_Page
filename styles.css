@@ -1,0 +1,177 @@
+:root {
+  --margin-bottom: 10px;
+  --label-padding-right: 20px;
+  --label-width: 200px;
+  --widget-width: 250px;
+  --widget-height: 100px;
+  --border-radius: 4px;
+  --main-padding: 30px;
+  --input-text-size: 14px;
+  --color-main: #5d6063;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fills up background image to the entire page */
+
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--color-main);
+  /* TODO: Change color to gradient */
+  /* background-color: rgb(182, 219, 254); */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-image: linear-gradient(135deg, white, lightgreen, darkblue);
+  background-size: cover;
+  background-image: no;
+  background-repeat: no-repeat; */
+}
+
+.form-header {
+  text-align: center;
+  background-color: rgb(230, 230, 230);
+  border: 1px solid rgb(186, 189, 190);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 1px 2px;
+  margin: 25px 0;
+  padding: var(--main-padding);
+}
+
+/* FORM STYLING */
+
+.user-info {
+  background-color: rgb(241, 238, 238);
+  border: 1px solid rgb(186, 189, 190);
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  padding: var(--main-padding);
+}
+
+/*INPUT STYLING*/
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'] {
+  border-radius: var(--border-radius);
+  color: var(--color-main);
+  font-size: var(--input-text-size);
+  background-color: rgb (255, 255, 255);
+  border: 1px solid rgb(186, 189, 190);
+  padding: 7px;
+  width: var(--widget-width);
+}
+
+.form-row input[type='email']:invalid {
+  border: 1.5px solid rgb(212, 53, 56);
+  color: rgb(212, 53, 56);
+  box-shadow: none;
+}
+
+.form-row label {
+  margin-bottom: 20px;
+  padding-right: var(--label-padding-right);
+  text-align: right;
+  margin-top: 5px;
+  width: var(--label-width);
+}
+
+.form-header,
+.user-info {
+  width: 600px;
+}
+
+/* RADIO BUTTON STYLYING */
+
+.radio-form-row {
+  border: none;
+  margin-bottom: var(--margin-bottom);
+}
+
+.radio-form-row .radio-label {
+  font-size: var(--input-text-size);
+  padding: 2px 20px 0 4px;
+}
+
+.radio-form-row legend {
+  width: var(--label-width);
+  padding-right: var(--label-padding-right);
+  text-align: right;
+  float: left;
+}
+
+/* DROPDOWN MENU STYLING */
+
+.form-row select {
+  padding: 5px;
+  font-size: 14px;
+  width: var(--widget-width);
+}
+
+/* TEXTAREA STYLING */
+
+.form-row textarea {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  border: 1px solid #d6d9dc;
+  border-radius: var(--border-radius);
+  padding: 10px;
+  width: var(--widget-width);
+  height: var(--widget-height);
+  margin-bottom: var(--widget-height);
+}
+
+.form-row .description {
+  color: #999999;
+  font-size: 14px;
+  margin-bottom: var(--margin-bottom);
+  margin-left: var(--label-width);
+}
+
+/* CHECKBOX STYLING */
+
+.form-row .checkbox-label {
+  /* margin-left: var(--label-width); */
+  width: var(--label-width);
+}
+
+.form-row input[type='checkbox'] {
+  margin-top: 14px;
+}
+
+.form-row .icon {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+/* BUTTON STYLING */
+
+.form-row button {
+  font-size: 1em;
+  font-weight: bold;
+  background-color: rgb(200, 200, 200);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 40px;
+  cursor: pointer;
+  margin-left: var(--label-width);
+}
+
+.form-row button:hover {
+  background-color: rgb(220, 220, 220);
+}
